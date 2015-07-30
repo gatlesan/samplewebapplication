@@ -1,4 +1,14 @@
 language: java
 script: ant war
+deploy:
+  provider: cloudfoundry
+  target: https://api.run.pivotal.io
+  username: gatlewar.santa544@gmail.com
+  password:
+    secure: XqxmJyxwhyes8rFEk+XcAmwVqU5rH+e068gfxT8GgGcld2MebXrQk+gWp5Ypyi2bb4zKXkR4E5J60c4LnWdVJlinkGd5gcRhUAKLZ8oBeZNDt2UdjpgAZqoR8dhCTP7wNWxb6M9hjObOvUn6kjaO1QTSkJgeAFG1ow5rsMwjyPg=
+  organization: Test@1234
+  space: testing
+  on:
+    repo: sgatlewa/sample-web-app
 
 
