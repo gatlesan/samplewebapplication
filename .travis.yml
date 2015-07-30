@@ -1,2 +1,6 @@
 language: java
+script: ant test
+after_success:
 script: ant war
+
+
