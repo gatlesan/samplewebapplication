@@ -6,3 +6,4 @@ applications:
   domain: api.run.pivotal.io
   buildpack: https://github.com/sgatlewa/java-buildpack#v1.4.2
   path:  ./home/travis/build/sgatlewa/samplewebapplication/UploadServlet32.war
+   command: java
