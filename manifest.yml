@@ -1,0 +1,8 @@
+applications:
+- name: sample-web-app-544
+  memory: 128M
+  instances: 1
+  host: sample-web-app-544
+  domain: api.run.pivotal.io
+  buildpack: https://github.com/sgatlewa/java-buildpack#v1.4.2
+  path: .
