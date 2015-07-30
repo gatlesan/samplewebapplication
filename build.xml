@@ -8,13 +8,15 @@
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
-    <path id="Web App Libraries.libraryclasspath"/>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="WebContent/WEB-INF/lib/javax.servlet-3.0.jar"/>
+    </path>
     <path id="EAR Libraries.libraryclasspath"/>
     <path id="samplewebapplication-test.classpath">
         <pathelement location="build/classes"/>
         <path refid="Web App Libraries.libraryclasspath"/>
         <path refid="EAR Libraries.libraryclasspath"/>
-        <pathelement location="../../Downloads/javax.servlet-3.0.jar/javax.servlet-3.0.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/javax.servlet-3.0.jar"/>
     </path>
     <target name="init">
         <mkdir dir="build/classes"/>
@@ -38,20 +40,4 @@
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-              	
-              	<target name="war" description="Bundles the application as a WAR file" depends="clean, build">
-              	    <mkdir dir="WebContent/WEB-INF/classes"/>
-              	     
-              	    <copy includeemptydirs="false" todir="WebContent/WEB-INF/classes">
-              	            <fileset dir="build/classes">
-              	            <include name="**/*.class"/>
-              	            </fileset>
-              	    </copy>
-              	     
-              	    <war destfile="samplewebapplication-test12.war"
-              	        basedir="WebContent"
-              	        needxmlfile="false">
-              	    </war>
-              	</target>
-
 </project>
