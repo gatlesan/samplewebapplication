@@ -8,3 +8,5 @@ deploy:
   password: Optra@24
   organization: Test@1234
   space: testing
+   on:
+    repo: sgatlewa/samplewebapplication 
