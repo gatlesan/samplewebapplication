@@ -52,7 +52,7 @@
 
               	  <junit printsummary="yes" haltonfailure="yes">
 
-              	    <classpath refid="JUnit 4.libraryclasspath"/>
+              	  <classpath refid="samplewebapplication-test.classpath"/>
 
               	    <test name="test.SampleJUnitTest"
               	             haltonfailure="no" outfile="result">
