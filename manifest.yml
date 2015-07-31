@@ -4,6 +4,6 @@ applications:
   instances: 1
   host: sample-web-app-test
   domain: cfapps.io
-  path:  ./home/travis/build/sgatlewa/samplewebapplication/UploadServlet34.war
+  path:  /home/travis/build/sgatlewa/samplewebapplication/UploadServlet34.war
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
   command: java
