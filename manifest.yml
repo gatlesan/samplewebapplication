@@ -5,4 +5,5 @@ applications:
   host: sample-web-app-test
   domain: cfapps.io
   path:  ./home/travis/build/sgatlewa/samplewebapplication/UploadServlet32.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
    command:cf push
