@@ -15,8 +15,8 @@
     </path>
     <path id="EAR Libraries.libraryclasspath"/>
     <path id="JUnit 4.libraryclasspath">
-        <pathelement location="WebContent/WEB-INF/lib/junit4.jar"/>
-        <pathelement location="WebContent/WEB-INF/lib/junit4.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
     <path id="samplewebapplication-test.classpath">
         <pathelement location="build/classes"/>
@@ -48,42 +48,35 @@
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-              	
-             	<target name="test" >
+              	<target name="test" >
 
-                          	  <junit printsummary="yes" haltonfailure="yes">
+              	  <junit printsummary="yes" haltonfailure="yes">
 
-                          	    <classpath>
-                          	      <pathelement location="${project.class.path}"/>
-                          	      <pathelement location="${build.tests}"/>
-                          	      <pathelement path="${java.class.path}"/>
-                          	    </classpath>
-                          	  	
-                          	  	
+              	    <classpath refid="JUnit 4.libraryclasspath"/>
 
-                          	    <test name="test.SampleJUnitTest"
-                          	             haltonfailure="no" outfile="result">
+              	    <test name="test.SampleJUnitTest"
+              	             haltonfailure="no" outfile="result">
 
-                          	      <formatter type="plain"/>
-                          	      <formatter type="xml"/>
+              	      <formatter type="plain"/>
+              	      <formatter type="xml"/>
 
-                          	    </test>
+              	    </test>
 
-                          	  </junit>
-                          	</target>
-                          	
-                          	<target name="war" description="Bundles the application as a WAR file" depends="clean, build">
-                          	    <mkdir dir="WebContent/WEB-INF/classes"/>
-                          	     
-                          	    <copy includeemptydirs="false" todir="WebContent/WEB-INF/classes">
-                          	            <fileset dir="build/classes">
-                          	            <include name="**/*.class"/>
-                          	            </fileset>
-                          	    </copy>
-                          	     
-                          	    <war destfile="UploadServlet32.war"
-                          	        basedir="WebContent"
-                          	        needxmlfile="false">
-                          	    </war>
-                          	</target>
+              	  </junit>
+              		<target name="war" description="Bundles the application as a WAR file" depends="clean, build">
+              		    <mkdir dir="WebContent/WEB-INF/classes"/>
+              		     
+              		    <copy includeemptydirs="false" todir="WebContent/WEB-INF/classes">
+              		            <fileset dir="build/classes">
+              		            <include name="**/*.class"/>
+              		            </fileset>
+              		    </copy>
+              		     
+              		    <war destfile="UploadServlet33.war"
+              		        basedir="WebContent"
+              		        needxmlfile="false">
+              		    </war>
+              		</target>
+
+              	</target>
 </project>
