@@ -52,11 +52,7 @@
 
               	  <junit printsummary="yes" haltonfailure="yes">
 
-              	    <classpath>
-              	      <pathelement location="${project.class.path}"/>
-              	      <pathelement location="${build.tests}"/>
-              	      <pathelement path="${java.class.path}"/>
-              	    </classpath>
+              	   <classpath refid="samplewebapplication-test.classpath"/>
 
               	    <test name="test.SampleJUnitTest"
               	             haltonfailure="no" outfile="result">
