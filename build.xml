@@ -15,8 +15,8 @@
     </path>
     <path id="EAR Libraries.libraryclasspath"/>
     <path id="JUnit 4.libraryclasspath">
-        <pathelement location="${ECLIPSE_HOME}plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
-        <pathelement location="${ECLIPSE_HOME}plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/junit4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/junit4.jar"/>
     </path>
     <path id="samplewebapplication-test.classpath">
         <pathelement location="build/classes"/>
@@ -58,6 +58,8 @@
                           	      <pathelement location="${build.tests}"/>
                           	      <pathelement path="${java.class.path}"/>
                           	    </classpath>
+                          	  	
+                          	  	
 
                           	    <test name="test.SampleJUnitTest"
                           	             haltonfailure="no" outfile="result">
