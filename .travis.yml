@@ -1,6 +1,5 @@
 language: java
-script: ant test
-        ant war
+script: ant war
 deploy:
   edge: true
   provider: cloudfoundry
