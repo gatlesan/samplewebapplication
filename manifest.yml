@@ -1,9 +1,9 @@
 applications:
-- name: sample-web-app-test
+  name: sample-web-app-test
   memory: 128M
   instances: 1
   host: sample-web-app-test
   domain: cfapps.io
-  path:  ./home/travis/build/sgatlewa/samplewebapplication/UploadServlet32.war
+  path:  ./home/travis/build/sgatlewa/samplewebapplication/UploadServlet34.war
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
-   command:java
+  command: java
