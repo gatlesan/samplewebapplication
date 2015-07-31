@@ -52,7 +52,11 @@
 
               	  <junit printsummary="yes" haltonfailure="yes">
 
-          
+              	    <classpath>
+              	      <pathelement location="${project.class.path}"/>
+              	      <pathelement location="${build.tests}"/>
+              	      <pathelement path="${java.class.path}"/>
+              	    </classpath>
 
               	    <test name="test.SampleJUnitTest"
               	             haltonfailure="no" outfile="result">
@@ -63,20 +67,21 @@
               	    </test>
 
               	  </junit>
-              		<target name="war" description="Bundles the application as a WAR file" depends="clean, test,build">
-              		    <mkdir dir="WebContent/WEB-INF/classes"/>
-              		     
-              		    <copy includeemptydirs="false" todir="WebContent/WEB-INF/classes">
-              		            <fileset dir="build/classes">
-              		            <include name="**/*.class"/>
-              		            </fileset>
-              		    </copy>
-              		     
-              		    <war destfile="UploadServlet33.war"
-              		        basedir="WebContent"
-              		        needxmlfile="false">
-              		    </war>
-              		</target>
-
+              		
               	</target>
+              	<target name="war" description="Bundles the application as a WAR file" depends="clean, build">
+              	    <mkdir dir="WebContent/WEB-INF/classes"/>
+              	     
+              	    <copy includeemptydirs="false" todir="WebContent/WEB-INF/classes">
+              	            <fileset dir="build/classes">
+              	            <include name="**/*.class"/>
+              	            </fileset>
+              	    </copy>
+              	     
+              	    <war destfile="UploadServlet34.war"
+              	        basedir="WebContent"
+              	        needxmlfile="false">
+              	    </war>
+              	</target>
+
 </project>
